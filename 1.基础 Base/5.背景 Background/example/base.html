@@ -1,0 +1,111 @@
+<!--
+ * @abstract: JianJie
+ * @version: 0.0.1
+ * @Author: bhabgs
+ * @Date: 2020-05-27 20:47:55
+ * @LastEditors: bhabgs
+ * @LastEditTime: 2020-05-28 21:02:34
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景色 基础样式</title>
+    <style>
+        .base {
+            width: 100px;
+            /*宽度100px*/
+            height: 100px;
+            /*高度100px*/
+
+            background-image: url('http://public-1251206464.file.myqcloud.com/pub/1590641816829002.jpg');
+            /*宽引用图片*/
+            background-size: 50%;
+            /*背景图片比例*/
+            background-repeat: no-repeat;
+            /*不重复*/
+            background-color: black;
+            /*背景色黑色*/
+        }
+
+        .base_bg {
+            width: 500px;
+            height: 500px;
+            background-image: url('http://public-1251206464.file.myqcloud.com/pub/1590641816829002.jpg');
+        }
+
+        .base2 {
+            background-color: black;
+            background-repeat: repeat-y;
+        }
+
+        .base3 {
+            background-color: black;
+            background-repeat: space;
+        }
+
+        .attachment {}
+
+        .position {
+            background-repeat: no-repeat;
+            background-position: right 10px top 20px;
+            background-color: red;
+        }
+
+        .size {
+            width: 800px;
+        }
+
+        .cover {
+            background-size: cover;
+        }
+
+        .contain {
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .composite {
+            width: 800px;
+            height: 800px;
+            padding: 10px;
+            background: url("http://public-1251206464.file.myqcloud.com/pub/1590641816829002.jpg") 0% 0%/60px 60px no-repeat padding-box,
+                url("http://public-1251206464.file.myqcloud.com/pub/1590641816829002.jpg") 40px 10px/110px 110px no-repeat content-box,
+                url("http://public-1251206464.file.myqcloud.com/pub/1590641816829002.jpg") 140px 40px/200px 100px no-repeat content-box red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>基础</h1>
+    <div class="base"></div>
+
+    <h1>背景重复x-y轴</h1>
+    <div class="base2 base_bg"></div>
+
+    <h1>背景重复等分</h1>
+    <div class="base3 base_bg"></div>
+
+    <h1>attachment</h1>
+    <div class="attachment base_bg"></div>
+
+    <h1>position</h1>
+
+    <div class="position base_bg"></div>
+
+    <h1>size</h1>
+
+    <div class="size cover base_bg"></div>
+    <div class="size contain base_bg"></div>
+
+    <h1>多组复合属性</h1>
+    <div class="composite"></div>
+
+
+    <div class="box_2"></div>
+    <div class="box_3"></div>
+</body>
+
+</html>
